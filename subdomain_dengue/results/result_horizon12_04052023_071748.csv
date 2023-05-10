@@ -1,0 +1,15 @@
+horizon,city,model,errorMetric,errorValue,modelTime
+12,sao-paulo,arimaSimple,nmse,2.80035583848245,0.6999999999999998
+12,sao-paulo,arimaSimple,mape,9.896997061420862,0.6999999999999998
+12,sao-paulo,local_LGBM,nmse,2.095850669283382,6.88
+12,sao-paulo,local_LGBM,mape,2.5373994222220584,6.88
+12,sao-paulo,all_LGBM,nmse,2.3657255255293923,83.48
+12,sao-paulo,all_LGBM,mape,4.932855022485946,83.48
+12,sao-paulo,meso_LGBM,nmse,2.1714273205270036,21.83
+12,sao-paulo,meso_LGBM,mape,3.2944212874625545,21.83
+12,sao-paulo,micro_LGBM,nmse,1.3085077512772658,16.83
+12,sao-paulo,micro_LGBM,mape,1.5644442723674679,16.83
+12,sao-paulo,kshape6_LGBM,nmse,2.6698795173003496,24.25
+12,sao-paulo,kshape6_LGBM,mape,4.0159339293672005,24.25
+12,sao-paulo,kshape17_LGBM,nmse,3.248631524374,28.18
+12,sao-paulo,kshape17_LGBM,mape,3.5954665892008557,28.18
