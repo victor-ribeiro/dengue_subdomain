@@ -1,0 +1,11 @@
+{
+    "num_leaves": 290,
+    "max_depth": 81,
+    "n_estimators": 149,
+    "learning_rate": 0.5128955926874266,
+    "reg_alpha": 7.564202938513826,
+    "reg_lambda": 0.5773508326778776,
+    "min_split_gain": 6919.2119213973965,
+    "subsample_freq": 6267,
+    "boosting_type": "gbdt"
+}

@@ -1,0 +1,15 @@
+{
+    "window_size": 4,
+    "time_delta": 4,
+    "params": {
+        "num_leaves": 333,
+        "max_depth": 36,
+        "n_estimators": 476,
+        "learning_rate": 0.9380722055054141,
+        "reg_alpha": 7.696418716746514,
+        "reg_lambda": 0.18969896996630986,
+        "min_split_gain": 2352.620199637446,
+        "subsample_freq": 4631,
+        "boosting_type": "dart"
+    }
+}
