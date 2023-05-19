@@ -1,0 +1,12 @@
+{
+    "window_size": 12,
+    "params": {
+        "n_estimators": 103,
+        "num_leaves": 3,
+        "boosting_type": "gbdt",
+        "max_depth": 30,
+        "min_split_gain": 686.431705910322,
+        "subsample": 0.42017693362956937,
+        "importance_type": "gain"
+    }
+}

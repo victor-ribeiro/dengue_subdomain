@@ -1,0 +1,45 @@
+[
+    {
+        "model": "LGBMRegressor",
+        "pckg": {
+            "name":"lightgbm"
+        },
+        "params":{
+            "n_estimators" : "trial.suggest_int('n_estimators', 2, 500)", 
+            "num_leaves": "trial.suggest_int('num_leaves', 2, 1000)",
+            "boosting_type" : "trial.suggest_categorical('boosting_type', ['gbdt', 'dart'])", 
+            "max_depth" : "trial.suggest_int('max_depth', -1, 100)", 
+            "min_split_gain" : "trial.suggest_float('min_split_gain', 0, 1500)",
+            "subsample" : "trial.suggest_float('subsample', 0, 1)", 
+            "importance_type" : "trial.suggest_categorical('importance_type', ['gain', 'split'])", 
+            "n_jobs" : "-1", 
+            "random_state" : "42"
+        },
+        "func_pkg": {
+            "name": "sklearn.metrics"
+        },
+        "func": "mean_squared_error"
+    },
+
+    {
+        "model": "RandomForestRegressor",
+        "pckg": {
+            "name":"sklearn.ensemble"
+        },
+        "params":{
+            "n_estimators" : "trial.suggest_int('n_estimators', 2, 500)", 
+            "max_depth": "trial.suggest_int('max_depth', 1, 1000)",
+            "min_samples_split" : "trial.suggest_int('min_samples_split', 2, 100)", 
+            "min_weight_fraction_leaf" : "trial.suggest_float('min_weight_fraction_leaf', 0, 0.5)",
+            "max_features" : "trial.suggest_float('max_features', 0, 1)", 
+            "min_impurity_decrease" : "trial.suggest_float('min_impurity_decrease', 0, 1)", 
+            "bootstrap" : "trial.suggest_categorical('bootstrap', [True, False])", 
+            "n_jobs" : "-1", 
+            "random_state" : "42"
+        },
+        "func_pkg": {
+            "name": "sklearn.metrics"
+        },
+        "func": "mean_squared_error"
+    }
+]

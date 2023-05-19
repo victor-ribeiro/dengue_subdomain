@@ -1,0 +1,12 @@
+{
+    "window_size": 8,
+    "params": {
+        "n_estimators": 61,
+        "num_leaves": 344,
+        "boosting_type": "dart",
+        "max_depth": 2,
+        "min_split_gain": 937.220912163216,
+        "subsample": 0.6694962510213196,
+        "importance_type": "split"
+    }
+}

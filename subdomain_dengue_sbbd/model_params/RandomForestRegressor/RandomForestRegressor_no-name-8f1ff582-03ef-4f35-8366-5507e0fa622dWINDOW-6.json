@@ -1,0 +1,12 @@
+{
+    "window_size": 6,
+    "params": {
+        "n_estimators": 481,
+        "max_depth": 924,
+        "min_samples_split": 50,
+        "min_weight_fraction_leaf": 0.0014997623380125493,
+        "max_features": 0.03978498801996984,
+        "min_impurity_decrease": 0.040040289391749986,
+        "bootstrap": false
+    }
+}
