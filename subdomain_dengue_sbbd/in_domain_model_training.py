@@ -66,6 +66,7 @@ def model_train(param_folder, X, Y):
 def in_domain_eval(xtest, ytest, train_process, cidades, k):
     result = {
         "cidades": [],
+        "n_cluster": [],
         "model_name": [],
         "window_size": [],
         "rmse": [],
@@ -80,6 +81,7 @@ def in_domain_eval(xtest, ytest, train_process, cidades, k):
         error = mean_squared_error(y_true=y, y_pred=y_hat, squared=False)
         print(f"[EVALUATING] model {regressor.__class__.__name__} - {cidade} - {error}")
         result["cidades"].append(cidade)
+        result["n_cluster"].append(k)
         result["model_name"].append(model_name)
         result["window_size"].append(window_size)
         result["rmse"].append(error)

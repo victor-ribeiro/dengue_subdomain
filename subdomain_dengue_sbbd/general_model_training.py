@@ -61,10 +61,12 @@ if __name__ == "__main__":
 
     for name, model_file in load_models_params("model_params"):
         result = {
-            "window_sise": [],
-            "train_time": [],
-            "city": [],
+            "cidades": [],
+            "n_cluster": [],
+            "model_name": [],
+            "window_size": [],
             "rmse": [],
+            "time": [],
         }
 
         with open(file=model_file, mode="r") as conf_file:
@@ -79,21 +81,24 @@ if __name__ == "__main__":
                 regressor = RandomForestRegressor(**model_config["params"])
             case "LGBMRegressor":
                 regressor = lgb.LGBMRegressor(**model_config["params"])
+        print(f"[TRAINING] - {name} - {window_size}")
         t_init = datetime.now()
         regressor.fit(X=x, y=y)
         t_end = datetime.now()
         train_time = (t_end - t_init).seconds
         for city in cities:
-            print(f"[TRAINING] error estimating - {name} - {city}")
+            print(f"[TRAINING] error estimating - {name} - {city}, {window_size}")
             xcity, ycity = xtest[city], ytest[city]
             xcity, ycity = prepair_attributes(X=xcity, Y=ycity, size=window_size)
             y_hat = regressor.predict(X=xcity)
             rmse = mean_squared_error(y_true=ycity, y_pred=y_hat)
-            result["window_sise"].append(window_size)
-            result["train_time"].append(train_time)
-            result["city"].append(city)
+            result["window_size"].append(window_size)
+            result["time"].append(train_time)
+            result["model_name"].append(regressor.__class__.__name__)
+            result["cidades"].append(city)
+            result["n_cluster"].append(1)
             result["rmse"].append(rmse)
-        result_folder = Path(f"results/{name}")
+        result_folder = Path(f"results/general_model/{name}")
         result_file = (
             f"regressor_{regressor.__class__.__name__}_window_size{window_size}.csv"
         )
