@@ -1,0 +1,15 @@
+\begin{table}
+\centering
+\caption{Mean error for municipality number of cases predition}
+\begin{tabular}{llllll}
+\toprule
+n\_cluster &          1 &       4 &      5 &      6 &      7 \\
+model\_name                      &            &         &        &        &        \\
+\midrule
+LGBMRegressor-general           & 41413.2450 &       - &      - &      - &      - \\
+LGBMRegressor-in-domain         &          - & 39.6566 & 6.7682 & 3.2980 & 0.4066 \\
+RandomForestRegressor-general   & 42884.9961 &       - &      - &      - &      - \\
+RandomForestRegressor-in-domain &          - & 50.2389 & 8.2552 & 3.1387 & 0.4104 \\
+\bottomrule
+\end{tabular}
+\end{table}
