@@ -29,7 +29,7 @@ def prepair_attributes(X: pd.DataFrame, Y: pd.DataFrame, size: int):
 if __name__ == "__main__":
     MDL_CONFIG_PATH = Path("./model_params")
     LNR_CONFIG_PATH = MDL_CONFIG_PATH / "model_config.json"
-    WINDOW_SIZE = range(2, 14, 2)
+    window_size = 6
     N_TRIALS = 100
 
     if not MDL_CONFIG_PATH.exists():
@@ -41,9 +41,7 @@ if __name__ == "__main__":
     # --     end      --
 
     models_gen = model_generator(file_path=LNR_CONFIG_PATH)
-    for window_size, (model, model_params, objective_func, model_name) in product(
-        WINDOW_SIZE, models_gen
-    ):
+    for model, model_params, objective_func, model_name in models_gen:
         random.shuffle(cities)
         data = data[cities]
         nrols, ncols = data.shape

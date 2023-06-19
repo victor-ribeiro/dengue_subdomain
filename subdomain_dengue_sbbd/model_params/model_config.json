@@ -1,5 +1,5 @@
 [
-    {
+        {
         "model": "LGBMRegressor",
         "pckg": {
             "name":"lightgbm"
@@ -20,7 +20,6 @@
         },
         "func": "mean_squared_error"
     },
-
     {
         "model": "RandomForestRegressor",
         "pckg": {
@@ -36,6 +35,23 @@
             "bootstrap" : "trial.suggest_categorical('bootstrap', [True, False])", 
             "n_jobs" : "-1", 
             "random_state" : "42"
+        },
+        "func_pkg": {
+            "name": "sklearn.metrics"
+        },
+        "func": "mean_squared_error"
+    },
+    {
+        "model": "LinearSVR",
+        "pckg": {
+            "name":"sklearn.svm"
+        },
+        "params":{
+            "C": "trial.suggest_float('C', 1, 100)", 
+            "loss": "trial.suggest_categorical('loss', ['epsilon_insensitive', 'squared_epsilon_insensitive'])", 
+            "fit_intercept": "trial.suggest_categorical('fit_intercept', [True, False])", 
+            "random_state": "42", 
+            "max_iter": "6500"
         },
         "func_pkg": {
             "name": "sklearn.metrics"
