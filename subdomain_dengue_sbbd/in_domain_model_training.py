@@ -3,6 +3,7 @@ import numpy as np
 from tslearn.preprocessing import TimeSeriesScalerMeanVariance
 from sklearn.metrics import mean_squared_error
 from sklearn.ensemble import RandomForestRegressor
+from sklearn.svm import LinearSVR
 from sklearn.model_selection import train_test_split
 import lightgbm as lgb
 from pathlib import Path
@@ -54,6 +55,8 @@ def model_train(param_folder, X, Y):
         match name:
             case "RandomForestRegressor":
                 regressor = RandomForestRegressor(**params)
+            case "LinearSVR":
+                regressor = LinearSVR(**params)
             case "LGBMRegressor":
                 regressor = lgb.LGBMRegressor(**params)
         t_init = datetime.now()
@@ -63,10 +66,11 @@ def model_train(param_folder, X, Y):
         yield name, w_size, train_time, regressor
 
 
-def in_domain_eval(xtest, ytest, train_process, cidades, k):
+def in_domain_eval(xtest, ytest, train_process, cidades, k, cluster_idx):
     result = {
         "cidades": [],
         "n_cluster": [],
+        "cluster_idx": [],
         "model_name": [],
         "window_size": [],
         "rmse": [],
@@ -82,11 +86,12 @@ def in_domain_eval(xtest, ytest, train_process, cidades, k):
         print(f"[EVALUATING] model {regressor.__class__.__name__} - {cidade} - {error}")
         result["cidades"].append(cidade)
         result["n_cluster"].append(k)
+        result["cluster_idx"].append(cluster_idx)
         result["model_name"].append(model_name)
         result["window_size"].append(window_size)
         result["rmse"].append(error)
         result["time"].append(train_time)
-        out_name = f"in-domain_{model_name}_WINDOW_SIZE_{window_size}_{k}.csv"
+        out_name = f"in-domain_{model_name}_K_{k}_cluster_{cluster_idx}.csv"
         yield out_name, result
 
 
@@ -115,6 +120,7 @@ if __name__ == "__main__":
                 train_process=[model_name, window_size, train_time, regressor],
                 cidades=cities,
                 k=k,
+                cluster_idx=cluster
             ):
                 # -- write result file
                 result_rf = pd.DataFrame(result)

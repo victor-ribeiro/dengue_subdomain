@@ -14,7 +14,7 @@ scaler.fit(data)
 scaled = scaler.transform(data)
 metric = "dtw"
 cities = data.index.values
-for i in range(4, 8):
+for i in range(2, 13):
     clusters = {}
     model = TimeSeriesKMeans(
         metric=metric,
