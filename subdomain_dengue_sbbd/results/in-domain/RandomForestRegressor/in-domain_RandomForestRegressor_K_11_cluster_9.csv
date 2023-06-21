@@ -1,0 +1,17 @@
+cidades,n_cluster,cluster_idx,model_name,window_size,rmse,time
+itaborai,11,9,RandomForestRegressor,6,1.1619315611106442,0
+ananindeua,11,9,RandomForestRegressor,6,0.8215906306073909,0
+parauapebas,11,9,RandomForestRegressor,6,2.707375443057091,0
+parnaiba,11,9,RandomForestRegressor,6,1.767566612472876,0
+cameta,11,9,RandomForestRegressor,6,0.844038754800211,0
+itaguai,11,9,RandomForestRegressor,6,1.035075845917774,0
+belem,11,9,RandomForestRegressor,6,2.7976124095212196,0
+marituba,11,9,RandomForestRegressor,6,0.8458576402234007,0
+braganca,11,9,RandomForestRegressor,6,0.8810759681578082,0
+castanhal,11,9,RandomForestRegressor,6,0.8165389659640576,0
+fortaleza,11,9,RandomForestRegressor,6,48.46389717203947,0
+barra-mansa,11,9,RandomForestRegressor,6,1.2577459708164231,0
+abaetetuba,11,9,RandomForestRegressor,6,0.8380998345680394,0
+tailandia,11,9,RandomForestRegressor,6,0.834007294904879,0
+maracanau,11,9,RandomForestRegressor,6,1.4755610015498277,0
+barcarena,11,9,RandomForestRegressor,6,0.8261610501389298,0

@@ -1,0 +1,15 @@
+cidades,n_cluster,cluster_idx,model_name,window_size,rmse,time
+boa-vista,12,7,LGBMRegressor,6,10.907263312209913,0
+franca,12,7,LGBMRegressor,6,33.509048820639585,0
+paulista,12,7,LGBMRegressor,6,7.299538733671821,0
+aracaju,12,7,LGBMRegressor,6,15.904069327202295,0
+teresina,12,7,LGBMRegressor,6,31.656257390444956,0
+sao-goncalo-do-amarante,12,7,LGBMRegressor,6,4.727452695999387,0
+sao-mateus,12,7,LGBMRegressor,6,14.487297156940185,0
+palmas,12,7,LGBMRegressor,6,29.917571373209903,0
+parnamirim,12,7,LGBMRegressor,6,14.086604772090434,0
+natal,12,7,LGBMRegressor,6,47.10236340814408,0
+vila-velha,12,7,LGBMRegressor,6,36.245718378091645,0
+serra,12,7,LGBMRegressor,6,146.8868196215568,0
+salvador,12,7,LGBMRegressor,6,13.59630890809634,0
+lauro-de-freitas,12,7,LGBMRegressor,6,3.676008666131763,0

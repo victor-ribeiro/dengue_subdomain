@@ -1,0 +1,8 @@
+{
+    "window_size": 6,
+    "params": {
+        "C": 14.544255084442167,
+        "loss": "squared_epsilon_insensitive",
+        "fit_intercept": true
+    }
+}

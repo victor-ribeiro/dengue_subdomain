@@ -1,0 +1,12 @@
+cidades,n_cluster,cluster_idx,model_name,window_size,rmse,time
+linhares,12,0,LinearSVR,6,32.77508742614816,0
+camacari,12,0,LinearSVR,6,11.133583106832315,0
+brasilia,12,0,LinearSVR,6,354.1440969763885,0
+montes-claros,12,0,LinearSVR,6,131.28556288938665,0
+iguatu,12,0,LinearSVR,6,14.586737484480416,0
+lagarto,12,0,LinearSVR,6,3.9699960161730523,0
+nossa-senhora-do-socorro,12,0,LinearSVR,6,9.88743368891034,0
+feira-de-santana,12,0,LinearSVR,6,73.72916435549178,0
+aracatuba,12,0,LinearSVR,6,74.38111458209116,0
+araraquara,12,0,LinearSVR,6,195.2575433375783,0
+santa-cruz-do-sul,12,0,LinearSVR,6,0.9358977638492881,0

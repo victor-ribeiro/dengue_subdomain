@@ -1,0 +1,16 @@
+cidades,n_cluster,cluster_idx,model_name,window_size,rmse,time
+paulista,11,7,LinearSVR,6,7.955454349614585,0
+boa-vista,11,7,LinearSVR,6,13.100300251306528,0
+serra,11,7,LinearSVR,6,91.73178728451579,0
+franca,11,7,LinearSVR,6,43.28902787325626,0
+paco-do-lumiar,11,7,LinearSVR,6,1.3074206116100269,0
+aracaju,11,7,LinearSVR,6,16.676069793307857,0
+francisco-morato,11,7,LinearSVR,6,24.00598087916614,0
+vila-velha,11,7,LinearSVR,6,38.95775704228039,0
+sao-goncalo-do-amarante,11,7,LinearSVR,6,3.8468637331192106,0
+sao-mateus,11,7,LinearSVR,6,16.68020059912404,0
+joao-pessoa,11,7,LinearSVR,6,67.1119274362942,0
+natal,11,7,LinearSVR,6,52.00441750491752,0
+salvador,11,7,LinearSVR,6,17.141121686502494,0
+parnamirim,11,7,LinearSVR,6,14.48220516078566,0
+palmas,11,7,LinearSVR,6,40.220947976841614,0

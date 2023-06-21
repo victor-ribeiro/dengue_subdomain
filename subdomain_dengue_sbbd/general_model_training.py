@@ -62,13 +62,14 @@ if __name__ == "__main__":
 
     for name, model_file in load_models_params("model_params"):
         result = {
-            "cidades": [],
-            "n_cluster": [],
-            "model_name": [],
-            "window_size": [],
-            "rmse": [],
-            "time": [],
-        }
+        "cidades": [],
+        "n_cluster": [],
+        "cluster_idx": [],
+        "model_name": [],
+        "window_size": [],
+        "rmse": [],
+        "time": [],
+    }
 
         with open(file=model_file, mode="r") as conf_file:
             model_config = json.load(fp=conf_file)
@@ -100,6 +101,7 @@ if __name__ == "__main__":
             result["model_name"].append(regressor.__class__.__name__)
             result["cidades"].append(city)
             result["n_cluster"].append(1)
+            result["cluster_idx"].append(0)
             result["rmse"].append(rmse)
         result_folder = Path(f"results/general_model/{name}")
         result_file = (

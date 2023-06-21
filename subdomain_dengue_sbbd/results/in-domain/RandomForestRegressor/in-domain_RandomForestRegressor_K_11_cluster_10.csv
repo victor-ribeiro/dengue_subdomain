@@ -1,0 +1,15 @@
+cidades,n_cluster,cluster_idx,model_name,window_size,rmse,time
+eunapolis,11,10,RandomForestRegressor,6,9.262363347319601,0
+caucaia,11,10,RandomForestRegressor,6,3.717467043818066,0
+mossoro,11,10,RandomForestRegressor,6,16.764237890930758,0
+sao-jose-de-ribamar,11,10,RandomForestRegressor,6,2.061125938663034,0
+caxias,11,10,RandomForestRegressor,6,3.1959461975977836,0
+juazeiro,11,10,RandomForestRegressor,6,3.6869769752240082,0
+itu,11,10,RandomForestRegressor,6,2.2116940175558866,0
+sao-luis,11,10,RandomForestRegressor,6,10.150444509637003,0
+sobral,11,10,RandomForestRegressor,6,1.1954646371591815,0
+maranguape,11,10,RandomForestRegressor,6,1.7787168665762183,0
+senador-canedo,11,10,RandomForestRegressor,6,11.8813807894288,0
+petropolis,11,10,RandomForestRegressor,6,1.236424043715006,0
+timon,11,10,RandomForestRegressor,6,0.8288888238916508,0
+bacabal,11,10,RandomForestRegressor,6,0.8526482668230492,0
